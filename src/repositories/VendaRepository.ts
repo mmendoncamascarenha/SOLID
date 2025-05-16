@@ -27,7 +27,16 @@ export default class VendaRepository implements CommandsVenda<Venda>{
         })
     }
     Listar(): Promise<Venda[]> {
-        throw new Error("Method not implemented.");
+        return new Promise((resolve,reject)=>{
+            conexao.query("Select * from venda",(erro, result)=>{
+                if(erro){
+                    return reject(erro)
+                }
+                else{
+                    return resolve(result as Venda[])
+                }
+            })
+        })
     }
     Apagar(id: number): Promise<string> {
         throw new Error("Method not implemented.");
