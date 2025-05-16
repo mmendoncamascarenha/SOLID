@@ -1,4 +1,5 @@
+node_modules/
 observacoes.txt
 .gitignore
-node_modules/
+
 
