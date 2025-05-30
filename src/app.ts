@@ -60,6 +60,14 @@ app.get("/api/v1/produto/listar",(req,res)=>{
     prod.listarProdutos(req,res);
 })
 
+app.get("/api/v1/produto/listarmaisvendidos",(req,res)=>{
+    prod.listarProdutosMaisVendidos(req,res);
+})
+
+app.get("/api/v1/produto/listarporcategoria/:categoria",(req,res)=>{
+    prod.listarProdutosPorCategoria(req,res);
+})
+
 app.post("/api/v1/produto/cadastrar",(req,res)=>{
     prod.listarProdutos(req,res);
 })

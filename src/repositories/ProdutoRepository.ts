@@ -38,6 +38,35 @@ export default class ProdutoRepository implements Commands<Produto>{
             })
         })
     }
+    ListarMaisVendidos(): Promise<Produto[]> {
+        return new Promise((resolve,reject)=>{
+            conexao.query(`SELECT produto.nome, produto.foto1, itensvenda.quantidade
+FROM produto INNER JOIN itensvenda
+ON produto.id = itensvenda.id_produto 
+ORDER BY itensvenda.quantidade DESC 
+LIMIT 0,10`,(erro, result)=>{
+                if(erro){
+                    return reject(erro)
+                }
+                else{
+                    return resolve(result as Produto[])
+                }
+            })
+        })
+    }
+
+    ListarPorCategoria(categoria:string): Promise<Produto[]> {
+        return new Promise((resolve,reject)=>{
+            conexao.query(`Select * from produto Where descricao like ${categoria} `,(erro, result)=>{
+                if(erro){
+                    return reject(erro)
+                }
+                else{
+                    return resolve(result as Produto[])
+                }
+            })
+        })
+    }
     Apagar(id: number): Promise<string> {
         throw new Error("Method not implemented.");
     }
@@ -48,5 +77,3 @@ export default class ProdutoRepository implements Commands<Produto>{
         throw new Error("Method not implemented.");
     }
 }
-//
-//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
