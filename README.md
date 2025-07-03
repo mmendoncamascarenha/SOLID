@@ -4,7 +4,7 @@ Projeto de exemplo para aplicar os princípios de design SOLID usando **TypeScri
 
 ---
 
-## 🚀 Tabela de Conteúdos
+## Tabela de Conteúdos
 
 1. [Sobre](#sobre)
 2. [Instalação](#instalação)
@@ -18,13 +18,13 @@ Projeto de exemplo para aplicar os princípios de design SOLID usando **TypeScri
 
 ---
 
-## 🔍 Sobre
+## Sobre
 
 Este projeto tem o objetivo de demonstrar como implementar os **princípios SOLID** em TypeScript para alcançar um código mais **modular** e **legível**.
 
 ---
 
-## 📦 Instalação
+## Instalação
 
 1. Clone o repositório:
 
@@ -57,7 +57,7 @@ Este projeto tem o objetivo de demonstrar como implementar os **princípios SOLI
 
 ---
 
-## ▶️ Uso
+## Uso
 
 Para rodar os exemplos:
 
@@ -75,7 +75,7 @@ ts-node src/index.ts
 
 ---
 
-## 🗂️ Estrutura de Pastas
+## Estrutura de Pastas
 
 ```
 SOLID/
@@ -93,7 +93,7 @@ SOLID/
 
 ---
 
-## 💻 Exemplos de Código
+##  Exemplos de Código
 
 ### 1. Single Responsibility Principle (SRP)
 
@@ -149,7 +149,7 @@ class Order {
 
 ---
 
-## 🧪 Testes
+## Testes
 
 (Se você tiver testes automatizados, explique como executá-los; caso não tenha, é uma boa ideia adicionar!)
 
@@ -165,7 +165,7 @@ jest
 
 ---
 
-## 📐 Princípios SOLID
+## Princípios SOLID
 
 * **S**ingle Responsibility Principle
 * **O**pen/Closed Principle
@@ -177,7 +177,7 @@ Cada pasta dentro de `src/` contém exemplos mostrando a aplicação prática de
 
 ---
 
-## 🤝 Contribuição
+## Contribuição
 
 Contribuições são bem-vindas! Siga estes passos:
 
@@ -188,6 +188,6 @@ Contribuições são bem-vindas! Siga estes passos:
 
 ---
 
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
