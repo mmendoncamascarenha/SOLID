@@ -20,7 +20,7 @@ Projeto de exemplo para aplicar os princípios de design SOLID usando **TypeScri
 
 ## 🔍 Sobre
 
-Este projeto tem o objetivo de demonstrar como implementar os **princípios SOLID** em TypeScript para alcançar um código mais **modular**, **legível** e **manutenível**.
+Este projeto tem o objetivo de demonstrar como implementar os **princípios SOLID** em TypeScript para alcançar um código mais **modular** e **legível**.
 
 ---
 
