@@ -7,6 +7,7 @@ import ProdutoService from "./services/ProdutoService";
 import VendaService from "./services/VendaService";
 import ItemVendidoService from "./services/ItemVendidoService";
 import PagamentoService from "./services/PagamentoService";
+import UsuarioService from "./services/UsuarioService";
 
 
 
@@ -21,6 +22,7 @@ const prod = new ProdutoService();
 const ven = new VendaService();
 const itn = new ItemVendidoService();
 const pag = new PagamentoService();
+const us = new UsuarioService();
 
 app.get("/api/v1/cliente/listar",(req,res)=>{
     cli.listarClientes(req,res);
@@ -51,9 +53,9 @@ app.post("/api/v1/funcionario/cadastrar",(req,res)=>{
 
 
 
-app.listen(5000,()=>{
-    console.log(`Online em: http://127.0.0.1:5000`)
-});
+//app.listen(5000,()=>{
+//    console.log(`Online em: http://127.0.0.1:5000`)
+//});
 
 //############################ produto ########################################
 app.get("/api/v1/produto/listar",(req,res)=>{
@@ -68,15 +70,16 @@ app.get("/api/v1/produto/listarporcategoria/:categoria",(req,res)=>{
     prod.listarProdutosPorCategoria(req,res);
 })
 
+app.get("/api/v1/produto/listarporid/:id",(req,res)=>{
+    prod.listarProdutosPorId(req,res);
+})
+
 app.post("/api/v1/produto/cadastrar",(req,res)=>{
     prod.listarProdutos(req,res);
 })
 
 
 
-app.listen(5000,()=>{
-    console.log(`Online em: http://127.0.0.1:5000`)
-});
 
 // ##################### venda #################
 
@@ -98,9 +101,9 @@ app.post("/api/v1/itensvenda/cadastrar",(req,res)=>{
 })
 
 
-app.listen(5000,()=>{
-    console.log(`Online em: http://127.0.0.1:5000`)
-});
+//app.listen(5000,()=>{
+//    console.log(`Online em: http://127.0.0.1:5000`)
+//});
 
 // ##################### pagamento #################
 
@@ -111,3 +114,22 @@ app.get("/api/v1/pagamento/listar",(req,res)=>{
 app.post("/api/v1/pagamento/cadastro",(req,res)=>{
    pag.cadastroPagamento(req,res);
 })
+
+// ######################## Usuario #####################
+
+app.post("/api/v1/usuarios/cadastrar",(req,res)=>{
+    us.cadastrarUsuario(req,res);
+ })
+
+
+ app.post("/api/v1/usuario/login",(req,res)=>{
+    us.loginUsuario(req,res);
+});
+
+
+
+//
+
+app.listen(5000,()=>{
+    console.log(`Online em: http://127.0.0.1:5000`)
+});

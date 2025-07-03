@@ -67,6 +67,19 @@ LIMIT 0,10`,(erro, result)=>{
             })
         })
     }
+
+    ListarPorId(id:number): Promise<Produto[]> {
+        return new Promise((resolve,reject)=>{
+            conexao.query(`Select * from produto Where id=${id} `,(erro, result)=>{
+                if(erro){
+                    return reject(erro)
+                }
+                else{
+                    return resolve(result as Produto[])
+                }
+            })
+        })
+    }
     Apagar(id: number): Promise<string> {
         throw new Error("Method not implemented.");
     }

@@ -57,6 +57,17 @@ export default class ProdutoService{
         }
     }
 
+    async listarProdutosPorId(req:Request, res:Response){
+        let id = req.params.id;
+        try{
+            const rs = await this.prodRepository.ListarPorId(parseInt(id));
+            return res.status(200).json(rs);
+        }
+        catch(erro){
+            return res.status(500).json(erro)
+        }
+    }
+
 }
 
 

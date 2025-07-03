@@ -4,4 +4,5 @@ export default interface Commands<T>{
     Apagar(id:number):Promise<string>;
     Atualizar(obj:T):Promise<T>;
     PesquisarId(id:number):Promise<T>
+    
 }
